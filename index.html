@@ -177,9 +177,9 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/%20" rel="section">
+          <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             Home
           </a>
@@ -187,9 +187,9 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/%20" rel="section">
+          <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             Tags
           </a>
@@ -197,9 +197,9 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/%20" rel="section">
+          <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             Categories
           </a>
@@ -207,9 +207,9 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/%20" rel="section">
+          <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             Archives
           </a>
@@ -267,7 +267,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/25/Pod/" itemprop="url">Pod</a></h1>
+                <a class="post-title-link" href="/2019/10/25/Pod/" itemprop="url">Pod总结</a></h1>
         
 
         <div class="post-meta">
@@ -279,7 +279,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-25T13:06:41+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-25T15:58:47+08:00">
                 2019-10-25
               </time>
             
@@ -289,6 +289,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Kubernetes/" itemprop="url" rel="index">
+                    <span itemprop="name">Kubernetes</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -319,8 +341,7 @@
       
         
           
-            <h1 id="Pod"><a href="#Pod" class="headerlink" title="Pod"></a>Pod</h1><p>[TOC]</p>
-<h2 id="为什么需要Pod"><a href="#为什么需要Pod" class="headerlink" title="为什么需要Pod"></a>为什么需要Pod</h2><p><strong>Pod，是Kubernetes项目中的原子调度单位</strong>。<strong>容器就是未来云计算系统中的进程；容器镜像就是系统里的.exe安装包，Kubernetes就是操作系统。</strong>在一个真正的操作系统里，进程并不是“孤苦伶仃”地独自运行，而是以<strong>进程组</strong>的方式，“有原则”的组织在一起。在kubernetes中，“进程组”所映射的概念就是Pod。Google的工程师发现，他们部署的应用，往往都存在着类似于“进程和进程组”的关系，也就是说这些应用之间有着<strong>亲密</strong>的协作关系，使得他们必须部署在同一台机器上。</p>
+            <h1 id="Pod"><a href="#Pod" class="headerlink" title="Pod"></a>Pod</h1><h2 id="为什么需要Pod"><a href="#为什么需要Pod" class="headerlink" title="为什么需要Pod"></a>为什么需要Pod</h2><p><strong>Pod，是Kubernetes项目中的原子调度单位</strong>。<strong>容器就是未来云计算系统中的进程；容器镜像就是系统里的.exe安装包，Kubernetes就是操作系统。</strong>在一个真正的操作系统里，进程并不是“孤苦伶仃”地独自运行，而是以<strong>进程组</strong>的方式，“有原则”的组织在一起。在kubernetes中，“进程组”所映射的概念就是Pod。Google的工程师发现，他们部署的应用，往往都存在着类似于“进程和进程组”的关系，也就是说这些应用之间有着<strong>亲密</strong>的协作关系，使得他们必须部署在同一台机器上。</p>
 <h2 id="Pod的实现原理"><a href="#Pod的实现原理" class="headerlink" title="Pod的实现原理"></a>Pod的实现原理</h2><p>Pod只是一个逻辑概念。</p>
 <p>Pod其实是一组共享了某些资源的容器，具体来说，Pod里的所有容器，共享的是同一个Network Namespace，并且可以声明共享同一个Volume。</p>
 <p>在Kubernetes中，Pod的实现需要使用一个中间容器，这个容器叫做Infra容器。在Pod中，Infra容器永远是第一个被创建的容器，而其他用户定义的容器，则通过Join Network Namespace的方式与Infra容器关联在一起。</p>
@@ -536,7 +557,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/25/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/25/Kubernetes%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -555,7 +576,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/25/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2019/10/25/Kubernetes%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90/" itemprop="url">Kubernetes工作流程分析</a></h1>
         
 
         <div class="post-meta">
@@ -567,7 +588,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-25T11:20:21+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-25T15:58:47+08:00">
                 2019-10-25
               </time>
             
@@ -577,6 +598,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Kubernetes/" itemprop="url" rel="index">
+                    <span itemprop="name">Kubernetes</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -607,19 +650,32 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <h1 id="Kubernetes工作流程分析"><a href="#Kubernetes工作流程分析" class="headerlink" title="Kubernetes工作流程分析"></a>Kubernetes工作流程分析</h1><h2 id="总流程"><a href="#总流程" class="headerlink" title="总流程"></a>总流程</h2><p><img src="C:%5CUsers%5CThinkPad%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1571892461837.png" alt="1571892461837"></p>
+<p>以deployment为例，分析一下Kubernetes提交一个Deployment YAML文件后的工作流程</p>
+<ol>
+<li>准备好一个Deployment的YAML文件，然后通过kubectl发送到Api Server</li>
+<li>ApiServer接收到客户端的请求并将资源内容存储到数据库etcd中</li>
+<li>Controller组件（包括Scheduler、replication、endpoint）监控资源变化并做出反应</li>
+<li>ReplicaSet检查数据库变化，创建期望数量的Pod实例</li>
+<li>Scheduler再次检查数据库变化，发现尚未被分配到具体节点的Pod，然后根据一组相关规则将Pod分配到可以运行它们的节点上，并更新数据库记录，记录Pod分配情况</li>
+<li>Kubelet监控数据库变化，管理后续Pod生命周期，发现被分配到它所在节点上运行的那些Pod。如果发现新Pod，则会在该节点上运行这个新Pod</li>
+<li>kubeproxy运行在集群各个主机上，管理网络通信，服务发现，负载均衡。当有数据发送到主机时，其将路由到正确的pod或容器，对于主机上发出的数据，它可以基于请求地址发现远程服务器，并将数据正确路由，在某些情况下会使用轮询调度算法将请求发送到集群中的多个实例</li>
+</ol>
+<h2 id="Api-Server的工作"><a href="#Api-Server的工作" class="headerlink" title="Api Server的工作"></a>Api Server的工作</h2><p>当YAML文件被提交到Api Server后</p>
+<p>首先，Api Server会过滤这个请求，并完成一些前置性工作，比如授权、超时、处理、审计等。</p>
+<p>然后，进入MUX和Routes流程。MUX和Routes要做的就是完成URL和Handler绑定的场所。Handler则是按照/api(apis)/Groups/Version/Resource，对于Deployment来说则是/api/v1/deployments（node、pod、deployment是“ ”）找到Deployment类型的定义</p>
+<p>接着，Api Server会根据这个Deployment类型的定义，使用用户提交的YAML文件里的字段，创建一个CronJob对象。在这个过程中，API Server会进行一个Convert工作，即：把用户提交的YAML文件转换成一个叫做Super Version的对象，它正是该API资源类型所有版本的字段全集。这样用户提交不同版本的YAML文件，就都可以用这个Super Version对象来进行处理了。</p>
+<p>接下来，API Server会先后进行Admission（）和Validation（）操作。Validation负责验证这个对象的各个字段是否合法。这个被验证过的API对象，都保存在API Server中一个叫做Registry的数据结构中。</p>
+<p>最后，APIServer会把验证过的API对象转换为用户最初提交的版本，进行序列化操作，并调用Etcd的API保存起来</p>
+<h2 id="Controller的工作"><a href="#Controller的工作" class="headerlink" title="Controller的工作"></a>Controller的工作</h2><p><img src="C:%5CUsers%5CThinkPad%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1571901735209.png" alt="1571901735209"></p>
+<p><img src="C:%5CUsers%5CThinkPad%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1571901752403.png" alt="1571901752403"></p>
+<p>首先，从Kubernetes的API Server中获取它所关心的对象。这个操作依靠Informer完成的。Informer和API对象一一对应。在创建Informer的时候，需要传递一个networkClient，Informer通过networkClient和APIServer建立了连接。真正负责维护这个连接的，是Informer的Reflector，Reflector使用ListAndWatch方法获取并监听API对象实例的变化。</p>
+<p>在ListAndWatch机制下，一旦APIServer有新的API实例被创建、删除或者更新，Reflector都会收到“事件通知”。</p>
+<p>这时，该事件和它所对应的API对象这个组合，就被称为增量（Delta），它被放进一个Delta FIFO Queue中。</p>
+<p>另一方面，Informer会从这个队列中读取增量。每拿到一个增量，Informer就会判断这个增量里的事件类型，然后创建或者更新本地对象缓存（Store）；并且Informer会根据这个事件类型，触发事先注册好的ResourceEventHandler。这些Handler需要在创建控制器的时候注册给它对应的Informer。</p>
+<p>在控制器中，还有一个工作队列（WorkQueue）,这个工作队列的作用就是负责同步Informer和控制循环之间的数据。</p>
+<p>比如在Handler中注册了三个Handler（AddFunc、UpdateFunc、DeleteFunc），然后将该事件对应的API对象的Key加入到工作队列中。</p>
+<p>后面的控制循环，则会不断从工作队列中拿到API对象的Key，然后到缓存中去查询对应的API对象。执行真正的控制逻辑。</p>
 
           
         
@@ -699,7 +755,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%20%7C%7C%20archive">
+                <a href="/archives/">
               
                   <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
@@ -707,6 +763,15 @@
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
             
 
             
